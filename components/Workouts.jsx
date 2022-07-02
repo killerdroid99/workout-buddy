@@ -12,10 +12,12 @@ function Workouts() {
       <div className="workouts">
         {data.map((workout) => (
           <Workout
+            key={workout._id}
             title={workout.title}
             reps={workout.reps}
             load={workout.load}
-            key={workout._id} />
+            time={workout.createdAt}
+          />
         ))}
       </div>
     )
