@@ -25,7 +25,7 @@ function WorkoutForm() {
     <form className="workoutForm" onSubmit={handleSubmit}>
       <div className="inputgroup">
         <label htmlFor="title">Title: </label>
-        <input id="title" type="text" value={newWorkout.title} onChange={(e) => setNewWorkout({ ...newWorkout, title: e.target.value })} />
+        <input id="title" type="text" value={newWorkout.title} onChange={(e) => setNewWorkout({ ...newWorkout, title: e.target.value })} maxLength={25} />
       </div>
       <div className="inputgroup">
         <label htmlFor="reps">Reps: </label>
