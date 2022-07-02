@@ -14,7 +14,7 @@ function Workout({ title, reps, load, time, uid }) {
       initial={{ opacity: 0, scaleX: 0 }}
       animate={{ opacity: 1, scaleX: 1 }}
       exit={{ opacity: 0, scaleX: 0 }}
-      className="workout">
+      className="workout" >
       {mutation.isLoading && <div className="overlay">
         <p>Deleting</p>
       </div>}
