@@ -5,15 +5,14 @@ import { AnimatePresence } from "framer-motion"
 
 function Workouts() {
   const { data, isLoading, error } = useQuery('workouts', fetchWorkouts)
-  console.log(data);
 
   if (isLoading) return <p>Loading...</p>
   if (error) return <p>{error.message}</p>
   else {
     return (
       <div className="workouts">
-        {data.map((workout) => (
-          <AnimatePresence>
+        <AnimatePresence>
+          {data.map((workout) => (
             <Workout
               key={workout._id}
               title={workout.title}
@@ -22,8 +21,8 @@ function Workouts() {
               time={workout.createdAt}
               uid={workout._id}
             />
-          </AnimatePresence>
-        ))}
+          ))}
+        </AnimatePresence>
         {data.length === 0 && <h2>No workouts 😢</h2>}
       </div>
     )

@@ -19,13 +19,13 @@ function Workout({ title, reps, load, time, uid }) {
         <p>Deleting</p>
       </div>}
       <span>
-        <strong>Title:</strong> <p>{title}</p>
+        <h3>{title}</h3>
       </span>
       <span>
         <strong>Reps: </strong> <p>{reps}</p>
       </span>
       <span>
-        <strong>Load: </strong> <p>{load}</p>
+        <strong>Load(kg): </strong> <p>{load}</p>
       </span>
       <span>
         <time>{formatDistanceToNow(new Date(time), { addSuffix: true })}...</time>
