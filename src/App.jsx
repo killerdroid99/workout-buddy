@@ -1,10 +1,11 @@
-
+import Navbar from "../components/Navbar"
+import Workouts from "../components/Workouts"
 
 function App() {
-
   return (
     <div>
-      hello world
+      <Navbar />
+      <Workouts />
     </div>
   )
 }

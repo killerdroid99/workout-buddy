@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Finlandica&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Finlandica", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+	width: 100%;
+	padding: 1em 1.75em;
+	background: rgb(130, 255, 186);
+	color: white;
+	font-weight: 700;
+	font-size: 1.25em;
+	text-shadow: 0.05em 0.05em 0.025em #000000;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	filter: opacity(95%);
+}
+
+.navbar > h2 {
+	cursor: pointer;
+	width: fit-content;
+}
+
+.workouts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	margin-top: 7em;
+}
+
+.workout {
+	width: clamp(25em, 50%, 35em);
+	background: rgb(220, 255, 242);
+	padding: 1em;
+	border-radius: 0.35em;
+	box-shadow: 0.25em 0.25em 0.25em black;
+	border: 0.15em solid rgb(255, 145, 0);
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	font-size: 1.5em;
+	position: relative;
+}
+
+.workout > span {
+	display: flex;
+	gap: 0.75em;
+}
+
+.workout > svg {
+	aspect-ratio: 1/1;
+	width: 1.25em;
+	position: absolute;
+	right: 0.75em;
+	top: 0.5em;
+	padding: 0.15em;
+	border-radius: 50%;
+	background-color: rgb(255, 0, 43);
+	color: white;
+	transition: all ease-in-out 150ms;
+	cursor: pointer;
+}
+
+.workout > svg:hover {
+	background-color: slategray;
+	color: #000;
 }
